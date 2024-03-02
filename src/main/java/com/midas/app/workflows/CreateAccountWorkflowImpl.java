@@ -11,7 +11,8 @@ import java.time.Duration;
 @WorkflowImpl(taskQueues = "create-account-workflow")
 public class CreateAccountWorkflowImpl implements CreateAccountWorkflow {
 
-  private final RetryOptions customRetryOptions = RetryOptions.newBuilder().setMaximumAttempts(3).build();
+  private final RetryOptions customRetryOptions =
+      RetryOptions.newBuilder().setMaximumAttempts(3).build();
   private final AccountActivity accountActivity =
       Workflow.newActivityStub(
           AccountActivity.class,

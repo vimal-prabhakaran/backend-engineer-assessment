@@ -62,8 +62,9 @@ public class AccountServiceImpl implements AccountService {
 
     Optional<Account> existingAccountOptional =
         accountRepository.findById(UUID.fromString(accountId));
-    if (existingAccountOptional.isEmpty())
-      exceptionHandler.handleResourceNotFoundException(new ResourceNotFoundException());
+    if (!existingAccountOptional.isPresent()) {
+      throw new ResourceNotFoundException();
+    }
     Account existingAccount = existingAccountOptional.get();
     if (Objects.nonNull(updateAccountDto.getFirstName())) {
       existingAccount.setFirstName(updateAccountDto.getFirstName());

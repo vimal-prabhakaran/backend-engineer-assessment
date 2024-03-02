@@ -5,7 +5,6 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.List;
 import java.util.Map;
@@ -64,7 +63,7 @@ public class AccountIntegrationTest {
   }
 
   @Test
-  public void testCreateAndGetAccount() throws  JsonProcessingException {
+  public void testCreateAndGetAccount() throws JsonProcessingException {
     // Create Account
     String createUrl = "http://localhost:" + port + "/accounts";
     HttpHeaders createHeaders = new HttpHeaders();
