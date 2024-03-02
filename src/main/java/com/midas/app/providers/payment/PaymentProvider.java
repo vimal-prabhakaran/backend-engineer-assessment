@@ -12,5 +12,13 @@ public interface PaymentProvider {
    * @param details is the details of the account to be created.
    * @return Account
    */
-  Account createAccount(CreateAccount details);
+  Account createAccount(Account details);
+
+  /**
+   * updateAccount updates an existing account in the payment provider.
+   *
+   * @param details is the details of the account to be update.
+   * @return Account
+   */
+  Account updateAccount(Account details);
 }

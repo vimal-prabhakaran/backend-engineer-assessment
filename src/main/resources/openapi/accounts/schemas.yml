@@ -39,6 +39,14 @@ components:
           type: string
           description: "Email of user"
           example: "john@doe.com"
+        providerId:
+          type: string
+          description: "Provider ID"
+          example: "cus_PeygiHz8VXtlGh"
+        providerType:
+          type: string
+          description: "Provider Type"
+          example: "stripe"
         createdAt:
           type: string
           format: date-time
@@ -55,9 +63,26 @@ components:
         - id: usr_fba5b240-0e68-4e64-aca6-f12022dc4be3
           firstName: "John"
           lastName: "Doe"
+          email: "john@doe.com"
+          providerId: "cus_PeygiHz8VXtlGh"
+          providerType: "stripe"
           creationAt: "2022-04-13T01:52:40.690387Z"
           updatedAt: "2022-04-13T01:52:40.690387Z"
-
+    updateAccount:
+      type: object
+      properties:
+        firstName:
+          type: string
+          description: "Updated user's first name"
+          example: "John"
+        lastName:
+          type: string
+          description: "Updated user's last name"
+          example: "Doe"
+        email:
+          type: string
+          description: "Updated email of user"
+          example: "john@doe.com"
     accounts:
       type: array
       items:

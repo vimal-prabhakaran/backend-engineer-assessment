@@ -1,11 +1,5 @@
 # Getting Started
 
-**IMPORTANT: Do not send pull requests to this repository. This is a template repository and is not used for grading. Any pull requests will be closed and ignored.**
-
-## Introduction
-
-If you are reading this, you are probably have received this project as a coding challenge. Please read the instructions
-carefully and follow the steps below to get started.
 
 ## Setup
 
@@ -16,7 +10,7 @@ To run the application you would require:
 - [Java](https://www.azul.com/downloads/#zulu)
 - [Temporal](https://docs.temporal.io/cli#install)
 - [Docker](https://docs.docker.com/get-docker/)
-- [Stripe API Keys](https://stripe.com/docs/keys)
+
 
 ### On macOS:
 
@@ -47,13 +41,6 @@ or visit [Docker Installation](https://docs.docker.com/get-docker/) for more inf
 
 Please check the official documentation for the installation of Java, Temporal, and Docker for your platform.
 
-### Stripe API Keys
-
-Sign up for a Stripe account and get your API keys from the [Stripe Dashboard](https://dashboard.stripe.com/apikeys).
-Then in `application.properties` file add the following line with your secret key.
-
-```properties
-stripe.api-key=sk_test_51J3j
 ```
 
 ## Run
@@ -68,6 +55,12 @@ and then run the application using the following command or using your IDE.
 
 ```sh
 ./gradlew bootRun
+```
+
+#### Run test cases
+
+```sh
+gradle test
 ```
 
 ### Other commands

@@ -1,5 +1,6 @@
 package com.midas.app.models;
 
+import com.midas.app.enums.PaymentProviderType;
 import jakarta.persistence.*;
 import java.time.OffsetDateTime;
 import java.util.UUID;
@@ -7,8 +8,7 @@ import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-@Setter
-@Getter
+@Data
 @RequiredArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -28,6 +28,13 @@ public class Account {
 
   @Column(name = "email")
   private String email;
+
+  @Column(name = "provider_type")
+  @Enumerated(EnumType.STRING)
+  private PaymentProviderType providerType;
+
+  @Column(name = "provider_id")
+  private String providerId;
 
   @Column(name = "created_at")
   @CreationTimestamp
