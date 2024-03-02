@@ -1,4 +1,16 @@
-# Getting Started
+# Backend Assessment Submission
+
+## Change Summary
+
+- Implemented **Stripe Integration** to Create a Customer and to Update Customer Info.
+- Created **CreateAccountWorkflow** and **UpdateAccountWorkflow** Temporal workflows to create and update customer data in Stripe with robust retry mechanism.
+- The status of these workflows can be tracked using Temporal UI portal which runs at **[localhost:8233](http://localhost:8233)**
+- Implemented **PATCH /accounts/{accountId}** API to support partial updates at both internal system as well as provider systems.
+- Added **providerId** and **providerType** fields to Account entity and to relevant OpenAPI response DTOs.
+- Added **Dockerfile** with staging and production profiles and updated postgres image tags.
+- Covered **Integration Test** to ensure Stripe Integration workflow is intact.
+- **Code Walkthrough video** is added in the main folder.
+
 
 
 ## Setup
