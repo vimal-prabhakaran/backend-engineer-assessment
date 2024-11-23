@@ -1,15 +1,56 @@
-# Backend Assessment Submission
+# Resiliant Payment Processing using Temporal
 
-## Change Summary
 
-- Implemented **Stripe Integration** to Create a Customer and to Update Customer Info.
-- Created **CreateAccountWorkflow** and **UpdateAccountWorkflow** Temporal workflows to create and update customer data in Stripe with robust retry mechanism.
-- The status of these workflows can be tracked using Temporal UI portal which runs at **[localhost:8233](http://localhost:8233)**
-- Implemented **PATCH /accounts/{accountId}** API to support partial updates at both internal system as well as provider systems.
-- Added **providerId** and **providerType** fields to Account entity and to relevant OpenAPI response DTOs.
-- Added **Dockerfile** with staging and production profiles and updated postgres image tags.
-- Covered **Integration Test** to ensure Stripe Integration workflow is intact.
-- **Code Walkthrough video** is added in the main folder.
+## Features
+
+### Stripe Integration
+- Implemented **Stripe Integration** to:
+  - Create a customer in Stripe.
+  - Update customer information in Stripe.
+
+### Temporal Workflows
+- Developed **CreateAccountWorkflow** and **UpdateAccountWorkflow**:
+  - Manages customer creation and updates in Stripe with a robust retry mechanism.
+  - Workflow status can be tracked using the Temporal UI portal available at **[localhost:8233](http://localhost:8233)**.
+
+### API Enhancements
+- **PATCH /accounts/{accountId}** API:
+  - Supports partial updates for account data.
+  - Ensures updates are applied both within the internal system and external provider systems.
+
+---
+
+## Updates
+
+### Entity and OpenAPI Changes
+- Updated `Account` entity with:
+  - **providerId**: Identifier for external providers.
+  - **providerType**: Type of the external provider.
+- Enhanced OpenAPI response DTOs to include the above fields.
+
+### Dockerization
+- Added **Dockerfile** with:
+  - Staging and production profiles.
+  - Updated PostgreSQL image tags for compatibility and performance.
+
+### Testing
+- Added **Integration Tests**:
+  - Ensures the integrity of the Stripe Integration workflows.
+
+---
+
+## Additional Resources
+- **Code Walkthrough Video**:
+  - A detailed walkthrough of the implemented features is available in the main project folder for reference.
+
+---
+
+## Quick Links
+- Temporal UI: **[http://localhost:8233](http://localhost:8233)**
+- Documentation and Code Walkthrough: Located in the main folder.
+
+---
+
 
 
 
