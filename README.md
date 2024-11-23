@@ -1,4 +1,4 @@
-# Resiliant Payment Processing using Temporal
+# Resilient Payment Processing using Temporal
 
 
 ## Features
